@@ -37,7 +37,7 @@ export function About() {
             <div className="space-y-0">
               <a
                 href="mailto:your.email@example.com"
-                className="flex items-center justify-between py-4 border-b  transition-colors group"
+                className="flex items-center justify-between py-4 border-b transition-colors group"
               >
                 <span className="text-[15px]">Email</span>
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -47,7 +47,7 @@ export function About() {
                 href="https://www.linkedin.com/in/mohammed-aslam-k-918a33227/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between py-4 border-b  transition-colors group"
+                className="flex items-center justify-between py-4 border-b transition-colors group"
               >
                 <span className="text-[15px]">LinkedIn</span>
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -55,7 +55,7 @@ export function About() {
 
               <a
                 href="#"
-                className="flex items-center justify-between py-4 border-b  transition-colors group"
+                className="flex items-center justify-between py-4 border-b transition-colors group"
               >
                 <span className="text-[15px]">Dribbble</span>
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
