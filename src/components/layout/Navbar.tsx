@@ -13,34 +13,35 @@ export function Navbar({ currentRoute, onNavigate }: NavbarProps) {
       transition={{ duration: 0.6 }}
       className="px-8 py-6"
     >
-      <div className="max-w-6xl mx-auto flex justify-between items-center">
-        <div className="text-sm flex items-center gap-2">
-          <span className="font-medium">Aslam</span>
-          <span className="text-gray-400">|</span>
-          <div className="flex items-center gap-2">
+      <div className="max-w-6xl mx-auto flex items-center justify-between">
+        <div className="text-sm font-medium">Aslam</div>
+
+        <div className="flex-1 flex items-center justify-center">
+          <div className="flex items-center gap-6">
             <a
-              href="/"
+              href="design"
               onClick={(event) => {
                 event.preventDefault();
-                onNavigate("/");
+                onNavigate("design");
               }}
-              className={`transition-colors ${currentRoute === "/" ? "text-black font-semibold" : "text-gray-600 hover:text-black"}`}
+              className={`transition-colors ${currentRoute === "design" ? "text-black font-semibold" : "text-gray-600 hover:text-black"}`}
             >
               Design
             </a>
-            <span className="text-gray-400">/</span>
             <a
-              href="/dev"
+              href="dev"
               onClick={(event) => {
                 event.preventDefault();
-                onNavigate("/dev");
+                onNavigate("dev");
               }}
-              className={`transition-colors ${currentRoute === "/dev" ? "text-black font-semibold" : "text-gray-600 hover:text-black"}`}
+              className={`transition-colors ${currentRoute === "dev" ? "text-black font-semibold" : "text-gray-600 hover:text-black"}`}
             >
               Dev
             </a>
           </div>
         </div>
+
+        <div className="w-6" />
       </div>
     </motion.nav>
   );
