@@ -18,6 +18,11 @@
   --accent-foreground: #030213;
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
+  /* Metercube brand tokens */
+  --mc-gold: #C8A96E;
+  --mc-charcoal: #1A1714;
+  --mc-cream: #FAF8F5;
+  --mc-warm: #EDE8E0;
   --border: rgba(0, 0, 0, 0.1);
   --input: transparent;
   --input-background: #f3f3f5;

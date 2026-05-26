@@ -7,7 +7,7 @@ const devProjects = [
     subtitle: "Full-stack React application with real-time inventory",
     description:
       "Built a high-performance e-commerce platform with advanced filtering, checkout optimization, and admin dashboard.",
-    bgColor: "bg-blue-300",
+    bgColor: "bg-gray-100",
     year: "2025",
   },
   {
@@ -15,25 +15,10 @@ const devProjects = [
     subtitle: "Next.js + TypeScript for enterprise analytics",
     description:
       "Created a scalable SaaS dashboard with real-time data visualization, user management, and comprehensive API integration.",
-    bgColor: "bg-purple-300",
+    bgColor: "bg-gray-100",
     year: "2024",
   },
-  {
-    title: "Component Library Build",
-    subtitle: "Reusable design system with Tailwind & TypeScript",
-    description:
-      "Developed a comprehensive component library for rapid development, ensuring consistency and accessibility across projects.",
-    bgColor: "bg-emerald-300",
-    year: "2024",
-  },
-  {
-    title: "WordPress Custom Theme",
-    subtitle: "Performance-optimized headless CMS implementation",
-    description:
-      "Built custom WordPress theme with REST API integration, optimizing for speed, SEO, and mobile-first design.",
-    bgColor: "bg-orange-300",
-    year: "2023",
-  },
+  
 ];
 
 export function DevProjects() {
