@@ -1,7 +1,16 @@
 import { motion } from "motion/react";
 import { ProjectCard } from "../common/ProjectCard";
 
-const projects = [
+interface CaseStudyProject {
+  title: string;
+  subtitle: string;
+  description: string;
+  bgColor: string;
+  year: string;
+  route?: string;
+}
+
+const projects: CaseStudyProject[] = [
   {
     title: "Designing AI-driven Interfaces",
     subtitle: "Building an Innovation Design System",
@@ -27,16 +36,21 @@ const projects = [
     year: "2024",
   },
   {
-    title: "Behavioral Design & Gamification",
-    subtitle: "UX Research for User Engagement by Psychology and AI",
+    title: "Metercube redesign case study",
+    subtitle: "Premium furniture, home décor, and interiors for Bengaluru homeowners",
     description:
-      "Research-driven approach to designing engaging experiences using behavioral psychology and gamification principles.",
+      "A full website redesign case study for Metercube, focusing on premium commerce, interior packages, and a refined shopping experience.",
     bgColor: "bg-amber-300",
-    year: "2023",
+    year: "2024",
+    route: "metercube",
   },
 ];
 
-export function Work() {
+interface WorkProps {
+  onNavigate: (path: string) => void;
+}
+
+export function Work({ onNavigate }: WorkProps) {
   return (
     <section id="work" className="py-16 px-8">
       <div className="max-w-6xl mx-auto">
@@ -57,7 +71,12 @@ export function Work() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} index={index} />
+            <ProjectCard
+              key={index}
+              project={project}
+              index={index}
+              onClick={project.route ? () => onNavigate(project.route!) : undefined}
+            />
           ))}
         </div>
       </div>

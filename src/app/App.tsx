@@ -2,10 +2,13 @@ import { useEffect, useState } from "react";
 import { Layout } from "../components/layout/Layout";
 import { DesignPage } from "../pages/DesignPage";
 import { DevPage } from "../pages/DevPage";
+import { MetercubeCaseStudyPage } from "../pages/MetercubeCaseStudyPage";
 
 const getRoute = () => {
   const pathname = window.location.pathname;
-  return pathname === "/dev" ? "/dev" : "/";
+  if (pathname === "/dev") return "dev";
+  if (pathname === "/metercube") return "metercube";
+  return "design";
 };
 
 export default function App() {
@@ -18,15 +21,22 @@ export default function App() {
   }, []);
 
   const navigate = (path: string) => {
-    if (path !== window.location.pathname) {
-      window.history.pushState(null, "", path);
+    const targetPath = path === "design" ? "/" : `/${path}`;
+    if (targetPath !== window.location.pathname) {
+      window.history.pushState(null, "", targetPath);
       setRoute(getRoute());
     }
   };
 
   return (
     <Layout currentRoute={route} onNavigate={navigate}>
-      {route === "/" ? <DesignPage /> : <DevPage />}
+      {route === "dev" ? (
+        <DevPage />
+      ) : route === "metercube" ? (
+        <MetercubeCaseStudyPage />
+      ) : (
+        <DesignPage onNavigate={navigate} />
+      )}
     </Layout>
   );
 }

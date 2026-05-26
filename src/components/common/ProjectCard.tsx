@@ -11,9 +11,10 @@ interface Project {
 interface ProjectCardProps {
   project: Project;
   index: number;
+  onClick?: () => void;
 }
 
-export function ProjectCard({ project, index }: ProjectCardProps) {
+export function ProjectCard({ project, index, onClick }: ProjectCardProps) {
   const isDark = project.bgColor.includes("slate");
 
   return (
@@ -22,7 +23,10 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className={`group ${project.bgColor} rounded-2xl p-6 flex flex-col justify-between min-h-[340px] hover:scale-[1.02] transition-transform duration-300`}
+      onClick={onClick}
+      className={`group ${project.bgColor} rounded-2xl p-6 flex flex-col justify-between min-h-[340px] hover:scale-[1.02] transition-transform duration-300 ${onClick ? "cursor-pointer" : ""}`}
+      role={onClick ? "button" : undefined}
+      tabIndex={onClick ? 0 : undefined}
     >
       <div className="space-y-3">
         <div className="flex items-start justify-between">
@@ -44,14 +48,10 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
       </div>
 
-      <div className="mt-5 space-y-3">
+      <div className="mt-5">
         <div className={`aspect-video rounded-lg ${isDark ? 'bg-white/5' : 'bg-black/5'} flex items-center justify-center overflow-hidden`}>
           <div className={`w-20 h-20 rounded-xl ${isDark ? 'bg-white/10' : 'bg-black/10'}`} />
         </div>
-
-        <button className={`w-full py-2.5 px-4 rounded-full text-xs font-medium uppercase tracking-wide ${isDark ? 'bg-white text-black hover:bg-white/90' : 'bg-black text-white hover:bg-black/90'} transition-colors duration-200`}>
-          Explore
-        </button>
       </div>
     </motion.article>
   );
