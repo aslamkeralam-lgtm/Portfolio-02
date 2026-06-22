@@ -11,30 +11,7 @@ interface CaseStudyProject {
 }
 
 const projects: CaseStudyProject[] = [
-  {
-    title: "Designing AI-driven Interfaces",
-    subtitle: "Building an Innovation Design System",
-    description:
-      "Crafting intuitive interfaces for complex AI systems, making machine learning accessible to everyday users.",
-    bgColor: "bg-rose-300",
-    year: "2025",
-  },
-  {
-    title: "Enterprise Dashboard Experience",
-    subtitle: "Real-Time Analytics Platform for Business Intelligence",
-    description:
-      "Complete redesign of enterprise analytics platform, improving data visualization and workflow efficiency.",
-    bgColor: "bg-teal-200",
-    year: "2024",
-  },
-  {
-    title: "Client Command Platform",
-    subtitle: "Optimized User Experience for B2B Applications",
-    description:
-      "End-to-end design and development of a B2B command center for client management and operations.",
-    bgColor: "bg-slate-800",
-    year: "2024",
-  },
+  
   {
     title: "Metercube redesign case study",
     subtitle: "Premium furniture, home décor, and interiors for Bengaluru homeowners",
@@ -43,6 +20,15 @@ const projects: CaseStudyProject[] = [
     bgColor: "bg-amber-300",
     year: "2024",
     route: "metercube",
+  },
+  {
+    title: "IGapp investment case study",
+    subtitle: "Mobile-first investment experience for creator growth",
+    description:
+      "A product-led redesign of IGapp to simplify portfolio clarity, tax-aware guidance, and growth actions.",
+    bgColor: "bg-sky-200",
+    year: "2025",
+    route: "igapp",
   },
 ];
 
