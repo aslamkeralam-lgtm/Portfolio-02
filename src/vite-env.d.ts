@@ -8,3 +8,4 @@ declare module "*.gif";
 declare module "*.webp";
 declare module "*.bmp";
 declare module "*.ico";
+declare module "*.pdf";

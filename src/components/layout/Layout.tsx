@@ -10,7 +10,7 @@ interface LayoutProps {
 
 export function Layout({ children, currentRoute, onNavigate }: LayoutProps) {
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
       <Navbar currentRoute={currentRoute} onNavigate={onNavigate} />
       {children}
       <Footer />

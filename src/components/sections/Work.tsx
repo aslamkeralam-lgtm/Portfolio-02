@@ -47,10 +47,10 @@ export function Work({ onNavigate }: WorkProps) {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <h2 className="text-xs uppercase tracking-widest text-gray-500 mb-2">
+          <h2 className="text-base font-semibold uppercase tracking-widest text-gray-900 mb-2">
             CASE STUDIES
           </h2>
-          <p className="text-sm text-gray-600">
+          <p className="text-lg text-gray-600">
             Selected works I have done as a UX designer. I believe the best design is invisible, it supports user to make a better decision.
           </p>
         </motion.div>
