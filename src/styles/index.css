@@ -1,3 +1,59 @@
 @import './fonts.css';
 @import './tailwind.css';
 @import './theme.css';
+
+@layer base {
+  body {
+    cursor: none !important;
+  }
+
+  .splash-cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    width: 52px;
+    height: 52px;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
+  }
+
+  .splash-ring {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(0, 0, 0, 0.2);
+    opacity: 0.85;
+    transition: transform 160ms ease, opacity 160ms ease;
+  }
+
+  .splash-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    background: #000;
+    box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.08);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+  }
+
+  .splash-cursor.clicked .splash-ring {
+    animation: splash-pop 0.45s ease-out forwards;
+  }
+
+  .splash-cursor.clicked .splash-dot {
+    transform: scale(0.72);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.06);
+  }
+
+  @keyframes splash-pop {
+    0% {
+      transform: scale(1);
+      opacity: 0.85;
+    }
+    100% {
+      transform: scale(2.1);
+      opacity: 0;
+    }
+  }
+}

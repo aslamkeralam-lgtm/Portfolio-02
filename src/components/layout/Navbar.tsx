@@ -22,7 +22,7 @@ export function Navbar({ currentRoute, onNavigate }: NavbarProps) {
       <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4">
         <div className="flex items-center gap-6 text-sm font-medium text-foreground">
           <a
-            href="design"
+            href="/"
             onClick={(event) => {
               event.preventDefault();
               handleNavigate("design");
@@ -31,7 +31,16 @@ export function Navbar({ currentRoute, onNavigate }: NavbarProps) {
           >
             <img src={profileIcon} alt="Logo" className="h-12 w-auto" />
           </a>
-          <h3>Aslam K</h3>
+          <a
+            href="/"
+            onClick={(event) => {
+              event.preventDefault();
+              handleNavigate("design");
+            }}
+            className="text-sm font-medium text-foreground hover:text-foreground/80"
+          >
+            <h3>Aslam K</h3>
+          </a>
           <a
             href={resumePdf}
             target="_blank"

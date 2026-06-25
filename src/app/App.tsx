@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import { Cursor } from "../components/Cursor";
 import { Layout } from "../components/layout/Layout";
 import { DesignPage } from "../pages/DesignPage";
 import { MetercubeCaseStudyPage } from "../pages/MetercubeCaseStudyPage.jsx";
-import { IGappCaseStudyPage } from "../pages/IGappCaseStudyPage.jsx";
+import IGappCaseStudyPage from "../pages/IGappCaseStudyPage.jsx";
 import { PhotoPage } from "../pages/PhotoPage";
 import { ResumePage } from "../pages/ResumePage";
 import { ComingSoonPage } from "../pages/ComingSoonPage";
@@ -26,6 +27,10 @@ export default function App() {
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [route]);
+
   const navigate = (path: string) => {
     const targetPath = path === "design" ? "/" : `/${path}`;
     if (targetPath !== window.location.pathname) {
@@ -35,20 +40,23 @@ export default function App() {
   };
 
   return (
-    <Layout currentRoute={route} onNavigate={navigate}>
-      {route === "metercube" ? (
-        <MetercubeCaseStudyPage />
-      ) : route === "igapp" ? (
-        <IGappCaseStudyPage />
-      ) : route === "photo" ? (
-        <PhotoPage />
-      ) : route === "resume" ? (
-        <ResumePage />
-      ) : route === "archives" ? (
-        <ComingSoonPage title="Archives" description="This Archives page is coming soon. Check back for updates." />
-      ) : (
-        <DesignPage onNavigate={navigate} />
-      )}
-    </Layout>
+    <>
+      <Cursor />
+      <Layout currentRoute={route} onNavigate={navigate}>
+        {route === "metercube" ? (
+          <MetercubeCaseStudyPage />
+        ) : route === "igapp" ? (
+          <IGappCaseStudyPage />
+        ) : route === "photo" ? (
+          <PhotoPage />
+        ) : route === "resume" ? (
+          <ResumePage />
+        ) : route === "archives" ? (
+          <ComingSoonPage title="Archives" description="This Archives page is coming soon. Check back for updates." />
+        ) : (
+          <DesignPage onNavigate={navigate} />
+        )}
+      </Layout>
+    </>
   );
 }

@@ -17,7 +17,7 @@ export function Hero() {
 
             <div className="flex flex-wrap items-center gap-6">
               <a
-                href="mailto:aslam.kerlam@gmail.com"
+                href="mailto:aslam.keralam@gmail.com"
                 className="inline-flex w-max items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
               >
                 Get in touch
