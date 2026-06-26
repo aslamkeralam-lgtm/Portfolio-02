@@ -10,6 +10,11 @@ import UAERebateCard from "./UAERebateCard";
 import caseImageB from "../../Images/Case 1/case-01-B.png";
 import caseImageC from "../../Images/Case 1/case-01-C.png";
 import caseImageE from "../../Images/Case 1/case-01-E.png";
+import caseImageF from "../../Images/Case 1/case-01-F.png";
+import caseImageG from "../../Images/Case 1/case-01-G.png";
+import caseImageH from "../../Images/Case 1/case-01-H.png";
+import caseImageI from "../../Images/Case 1/case-01-I.png";
+import caseImageJ from "../../Images/Case 1/case-01-J.png";
 
 export default function IGappCaseStudyPage() {
   return (
@@ -191,17 +196,76 @@ export default function IGappCaseStudyPage() {
           <h3 className="text-lg font-semibold mb-2">Tier Status, Progress, and Rebate Visibility</h3>
           <FindingsList />
 
-          <PlaceholderImage label="Annotated wireframe — Card variant A" caption="Wire" aspectRatio="16/7" bg="#eef1f5" />
-          <PlaceholderImage label="Annotated wireframe — Card variant B" caption="Wire" aspectRatio="16/7" bg="#eef1f5" />
-          <PlaceholderImage label="Annotated wireframe — Card variant C" caption="Wire" aspectRatio="16/7" bg="#eef1f5" />
-          <PlaceholderImage label="Annotated wireframe — Tier 2 reached" caption="Wire" aspectRatio="16/7" bg="#eef1f5" />
-
-          <PlaceholderImage
-            label="Dashboard — Cash Rebate Breakdown"
-            caption="Dashboard"
-            aspectRatio="9/16"
-            bg="linear-gradient(180deg,#f5f7fa 0%,#e8ecf1 100%)"
-          />
+          <figure className="my-8">
+            <img
+              src={caseImageF}
+              alt="Annotated wireframe — Card variant F"
+              className="w-full rounded-lg object-cover"
+              style={{ aspectRatio: "16/7" }}
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption className="mt-2 flex gap-3 text-xs text-gray-400 uppercase tracking-widest">
+              <span>Image</span>
+              <span>Annotated wireframe — Card variant F</span>
+            </figcaption>
+          </figure>
+          <figure className="my-8">
+            <img
+              src={caseImageG}
+              alt="Annotated wireframe — Card variant G"
+              className="w-full rounded-lg object-cover"
+              style={{ aspectRatio: "16/7" }}
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption className="mt-2 flex gap-3 text-xs text-gray-400 uppercase tracking-widest">
+              <span>Image</span>
+              <span>Annotated wireframe — Card variant G</span>
+            </figcaption>
+          </figure>
+          <figure className="my-8">
+            <img
+              src={caseImageH}
+              alt="Annotated wireframe — Card variant H"
+              className="w-full rounded-lg object-cover"
+              style={{ aspectRatio: "16/7" }}
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption className="mt-2 flex gap-3 text-xs text-gray-400 uppercase tracking-widest">
+              <span>Image</span>
+              <span>Annotated wireframe — Card variant H</span>
+            </figcaption>
+          </figure>
+          <figure className="my-8">
+            <img
+              src={caseImageI}
+              alt="Annotated wireframe — Tier 2 reached"
+              className="w-full rounded-lg object-cover"
+              style={{ aspectRatio: "16/7" }}
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption className="mt-2 flex gap-3 text-xs text-gray-400 uppercase tracking-widest">
+              <span>Image</span>
+              <span>Annotated wireframe — Tier 2 reached</span>
+            </figcaption>
+          </figure>
+          <figure className="my-8">
+            <img
+              src={caseImageJ}
+              alt="Dashboard — Cash Rebate Breakdown"
+              className="w-full rounded-lg object-cover"
+              style={{ aspectRatio: "9/16" }}
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption className="mt-2 flex gap-3 text-xs text-gray-400 uppercase tracking-widest">
+              <span>Image</span>
+              <span>Dashboard — Cash Rebate Breakdown</span>
+            </figcaption>
+          </figure>
 
           <p className="text-base leading-relaxed text-gray-700 mt-6">
             <strong>Web Design</strong>
