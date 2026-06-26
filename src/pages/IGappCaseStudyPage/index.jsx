@@ -7,6 +7,9 @@ import RebateTable from "./RebateTable";
 import UIPatternList from "./UIPatternList";
 import FindingsList from "./FindingsList";
 import UAERebateCard from "./UAERebateCard";
+import caseImageB from "../../Images/Case 1/case-01-B.png";
+import caseImageC from "../../Images/Case 1/case-01-C.png";
+import caseImageE from "../../Images/Case 1/case-01-E.png";
 
 export default function IGappCaseStudyPage() {
   return (
@@ -61,12 +64,21 @@ export default function IGappCaseStudyPage() {
           </div>
         </header>
 
-        <PlaceholderImage
-          label="App screenshot — hand holding phone"
-          caption="INTRO IMAGE"
-          aspectRatio="16/9"
-          bg="linear-gradient(135deg,#dbeafe 0%,#eff6ff 100%)"
-        />
+        <figure className="my-8">
+          <img
+            src={caseImageB}
+            alt="App screenshot — hand holding phone"
+            className="w-full rounded-lg object-cover"
+            style={{ aspectRatio: "16/9" }}
+            loading="lazy"
+            decoding="async"
+            quality={95}
+          />
+          <figcaption className="mt-2 flex gap-3 text-xs text-gray-400 uppercase tracking-widest">
+            <span>Image</span>
+            <span>INTRO IMAGE</span>
+          </figcaption>
+        </figure>
 
         <section className="mb-16">
           <SectionLabel>Introduction</SectionLabel>
@@ -109,12 +121,21 @@ export default function IGappCaseStudyPage() {
             <strong>lack of awareness about the full range of instruments</strong> and <strong>no strong incentive to explore beyond the usual choices</strong>.
           </p>
 
-          <PlaceholderImage
-            label="Sticky notes — Interview questions"
-            caption="2.1 Interview Questions"
-            aspectRatio="4/3"
-            bg="#f0f0ec"
-          />
+          <figure className="my-8">
+            <img
+              src={caseImageC}
+              alt="Sticky notes — Interview questions"
+              className="w-full rounded-lg object-cover"
+              style={{ aspectRatio: "4/3" }}
+              loading="lazy"
+              decoding="async"
+              quality={95}
+            />
+            <figcaption className="mt-2 flex gap-3 text-xs text-gray-400 uppercase tracking-widest">
+              <span>Image</span>
+              <span>2.1 Interview Questions</span>
+            </figcaption>
+          </figure>
         </section>
 
         <section className="mb-16">
@@ -150,12 +171,20 @@ export default function IGappCaseStudyPage() {
 
           <UIPatternList />
 
-          <PlaceholderImage
-            label="Chat / UI exploration grid"
-            caption="Chat Exploration"
-            aspectRatio="4/3"
-            bg="#eef0f3"
-          />
+          <figure className="my-8">
+            <img
+              src={caseImageE}
+              alt="Chat / UI exploration grid"
+              className="w-full rounded-lg object-cover"
+              style={{ aspectRatio: "4/3" }}
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption className="mt-2 flex gap-3 text-xs text-gray-400 uppercase tracking-widest">
+              <span>Image</span>
+              <span>Chat Exploration</span>
+            </figcaption>
+          </figure>
         </section>
 
         <section className="mb-16">
