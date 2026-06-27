@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Cursor } from "../components/Cursor";
 import { Layout } from "../components/layout/Layout";
 import { DesignPage } from "../pages/DesignPage";
-import { MetercubeCaseStudyPage } from "../pages/MetercubeCaseStudyPage.jsx";
+import MetercubeCaseStudyPage from "../pages/MetercubeCaseStudyPage.jsx";
 import IGappCaseStudyPage from "../pages/IGappCaseStudyPage/index.jsx";
 import { PhotoPage } from "../pages/PhotoPage";
 import { ResumePage } from "../pages/ResumePage";

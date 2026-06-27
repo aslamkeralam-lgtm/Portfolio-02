@@ -15,6 +15,13 @@ import caseImageG from "../../Images/Case 1/case-01-G.png";
 import caseImageH from "../../Images/Case 1/case-01-H.png";
 import caseImageI from "../../Images/Case 1/case-01-I.png";
 import caseImageJ from "../../Images/Case 1/case-01-J.png";
+import caseImageK from "../../Images/Case 1/case-01-K.png";
+import caseImageL from "../../Images/Case 1/case-01-L.png";
+import caseImageM from "../../Images/Case 1/case-01-M.png";
+import caseImageN from "../../Images/Case 1/case-01-N.png";
+import caseImageP from "../../Images/Case 1/case-01-O.png";
+import caseImageO from "../../Images/Case 1/case-01-P.png";
+import caseImageA from "../../Images/Case 1/case-01-A.png";
 
 export default function IGappCaseStudyPage() {
   return (
@@ -59,7 +66,6 @@ export default function IGappCaseStudyPage() {
               <ul className="space-y-0.5 text-sm text-gray-700">
                 <li>Mohammed Aslam K</li>
                 <li>Naveen Kumar</li>
-                <li>Avinash Thakur</li>
               </ul>
             </div>
             <div>
@@ -73,7 +79,7 @@ export default function IGappCaseStudyPage() {
           <img
             src={caseImageB}
             alt="App screenshot — hand holding phone"
-            className="w-full rounded-lg object-cover"
+            className="mx-auto block max-w-full h-auto rounded-lg object-contain"
             style={{ aspectRatio: "16/9" }}
             loading="lazy"
             decoding="async"
@@ -130,7 +136,7 @@ export default function IGappCaseStudyPage() {
             <img
               src={caseImageC}
               alt="Sticky notes — Interview questions"
-              className="w-full rounded-lg object-cover"
+              className="mx-auto block max-w-full h-auto rounded-lg object-contain"
               style={{ aspectRatio: "4/3" }}
               loading="lazy"
               decoding="async"
@@ -180,7 +186,7 @@ export default function IGappCaseStudyPage() {
             <img
               src={caseImageE}
               alt="Chat / UI exploration grid"
-              className="w-full rounded-lg object-cover"
+              className="mx-auto block max-w-full h-auto rounded-lg object-contain"
               style={{ aspectRatio: "4/3" }}
               loading="lazy"
               decoding="async"
@@ -200,7 +206,7 @@ export default function IGappCaseStudyPage() {
             <img
               src={caseImageF}
               alt="Annotated wireframe — Card variant F"
-              className="w-full rounded-lg object-cover"
+              className="mx-auto block max-w-full h-auto rounded-lg object-contain"
               style={{ aspectRatio: "16/7" }}
               loading="lazy"
               decoding="async"
@@ -214,7 +220,7 @@ export default function IGappCaseStudyPage() {
             <img
               src={caseImageG}
               alt="Annotated wireframe — Card variant G"
-              className="w-full rounded-lg object-cover"
+              className="mx-auto block max-w-full h-auto rounded-lg object-contain"
               style={{ aspectRatio: "16/7" }}
               loading="lazy"
               decoding="async"
@@ -228,7 +234,7 @@ export default function IGappCaseStudyPage() {
             <img
               src={caseImageH}
               alt="Annotated wireframe — Card variant H"
-              className="w-full rounded-lg object-cover"
+              className="mx-auto block max-w-full h-auto rounded-lg object-contain"
               style={{ aspectRatio: "16/7" }}
               loading="lazy"
               decoding="async"
@@ -242,7 +248,7 @@ export default function IGappCaseStudyPage() {
             <img
               src={caseImageI}
               alt="Annotated wireframe — Tier 2 reached"
-              className="w-full rounded-lg object-cover"
+              className="mx-auto block max-w-full h-auto rounded-lg object-contain"
               style={{ aspectRatio: "16/7" }}
               loading="lazy"
               decoding="async"
@@ -256,8 +262,8 @@ export default function IGappCaseStudyPage() {
             <img
               src={caseImageJ}
               alt="Dashboard — Cash Rebate Breakdown"
-              className="w-full rounded-lg object-cover"
-              style={{ aspectRatio: "9/16" }}
+              className="mx-auto block max-w-full h-auto rounded-lg object-contain"
+              Archive
               loading="lazy"
               decoding="async"
             />
@@ -273,7 +279,20 @@ export default function IGappCaseStudyPage() {
             We added the rebate scheme button to the navigation bar for better visibility, leveraging the additional real estate available on web.
           </p>
 
-          <PlaceholderImage label="Web navigation — rebate button" caption="Web Design" aspectRatio="16/6" bg="#eef1f5" />
+         <figure className="my-8">
+            <img
+              src={caseImageK}
+              alt="Dashboard — Cash Rebate Breakdown"
+              className="mx-auto block max-w-full h-auto rounded-lg object-contain"
+              Archive
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption className="mt-2 flex gap-3 text-xs text-gray-400 uppercase tracking-widest">
+              <span>Image</span>
+              <span>Dashboard — Cash Rebate Breakdown</span>
+            </figcaption>
+          </figure>
         </section>
 
         <section className="mb-16">
@@ -287,29 +306,22 @@ export default function IGappCaseStudyPage() {
             To address this, we added a <strong>collapsible version on mobile</strong>, giving users control without sacrificing visibility.
           </p>
 
-          <div className="rounded-xl bg-gray-100 p-6 mb-2">
-            <div className="grid grid-cols-2 gap-4">
-              <div
-                className="rounded-lg bg-white border border-gray-200 flex items-center justify-center text-xs text-gray-400 font-medium"
-                style={{ aspectRatio: "9/16" }}
-              >
-                [ Collapsed card ]
-              </div>
-              <div
-                className="rounded-lg bg-white border border-gray-200 flex items-center justify-center text-xs text-gray-400 font-medium"
-                style={{ aspectRatio: "9/16" }}
-              >
-                [ Expanded card ]
-              </div>
-            </div>
-            <p className="text-center mt-4 text-xs italic text-blue-500">
-              Made the card collapsible based on user feedback to reduce visual overload.
-            </p>
-          </div>
-          <figcaption className="flex gap-3 text-xs text-gray-400 uppercase tracking-widest mb-10">
+        <figure className="my-8">
+            <img
+              src={caseImageL}
+              alt="Dashboard — Cash Rebate Breakdown"
+              className="mx-auto block max-w-full h-auto rounded-lg object-contain"
+              Archive
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption className="flex gap-3 text-xs text-gray-400 uppercase tracking-widest mb-10">
             <span>Image</span>
             <span>Settings Page</span>
           </figcaption>
+          </figure>
+
+          
         </section>
 
         <section className="mb-16">
@@ -348,62 +360,60 @@ export default function IGappCaseStudyPage() {
           <SectionLabel>Present</SectionLabel>
           <h2 className="text-2xl font-bold mb-8">Hand-Off &amp; Final Design</h2>
 
-          <PlaceholderImage
-            label="Figma hand-off — Android states flow diagram"
-            caption="Hand Off"
-            aspectRatio="16/9"
-            bg="#f5f7fa"
-          />
-          <PlaceholderImage
-            label="Hand-off specs — iOS Card & Web App Card with measurements"
-            caption="Hand Off"
-            aspectRatio="16/7"
-            bg="#f5f7fa"
-          />
+          <figure className="my-8">
+            <img
+              src={caseImageM}
+              alt="Dashboard — Cash Rebate Breakdown"
+              className="mx-auto block max-w-full h-auto rounded-lg object-contain"
+              
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption className="flex gap-3 text-xs text-gray-400 uppercase tracking-widest mb-10">
+            <span>Image</span>
+            <span>Settings Page</span>
+          </figcaption>
+          </figure>
 
           <div className="mb-2">
             <p className="text-center text-sm font-bold tracking-wide text-gray-800 mb-1">Android</p>
             <p className="text-center text-xs uppercase tracking-widest text-gray-400 mb-4">Phase 1</p>
-            <PlaceholderImage
-              label="Hand-off Android — Phase 1 tier states (No Tier → My Tier → Tier 1–5 → Tier 5+)"
-              caption={null}
-              aspectRatio="16/5"
-              bg="#f0f2f5"
+           <figure className="my-8">
+            <img
+              src={caseImageP}
+              alt="Dashboard — Cash Rebate Breakdown"
+              className="mx-auto block max-w-full h-auto rounded-lg object-contain"
+              
+              loading="lazy"
+              decoding="async"
             />
-            <p className="text-center text-xs uppercase tracking-widest text-gray-400 mt-4 mb-4">Phase 2 (Addition of 'Cash Rebate')</p>
-            <PlaceholderImage
-              label="Hand-off Android — Phase 2 with cash rebate amounts"
-              caption={null}
-              aspectRatio="16/5"
-              bg="#f0f2f5"
-            />
-          </div>
-          <figcaption className="flex gap-3 text-xs text-gray-400 uppercase tracking-widest mb-10">
+             <figcaption className="flex gap-3 text-xs text-gray-400 uppercase tracking-widest mb-10">
             <span>Image</span>
             <span>Hand Off – Android</span>
           </figcaption>
+          </figure>
+          </div>
+         
 
           <div className="mb-2">
             <p className="text-center text-sm font-bold tracking-wide text-blue-600 mb-1">iOS</p>
             <p className="text-center text-xs uppercase tracking-widest text-gray-400 mb-4">Phase 1</p>
-            <PlaceholderImage
-              label="Hand-off iOS — Phase 1 tier states"
-              caption={null}
-              aspectRatio="16/5"
-              bg="#eef3fb"
+            <figure className="my-8">
+            <img
+              src={caseImageO}
+              alt="Dashboard — Cash Rebate Breakdown"
+              className="mx-auto block  h-auto rounded-lg object-contain"
+        
+              loading="lazy"
+              decoding="async"
             />
-            <p className="text-center text-xs uppercase tracking-widest text-gray-400 mt-4 mb-4">Phase 2 (Addition of 'Cash Rebate')</p>
-            <PlaceholderImage
-              label="Hand-off iOS — Phase 2 with cash rebate amounts"
-              caption={null}
-              aspectRatio="16/5"
-              bg="#eef3fb"
-            />
-          </div>
-          <figcaption className="flex gap-3 text-xs text-gray-400 uppercase tracking-widest">
+             <figcaption className="flex gap-3 text-xs text-gray-400 uppercase tracking-widest">
             <span>Image</span>
             <span>Hand Off – iOS</span>
           </figcaption>
+          </figure>
+          </div>
+         
         </section>
       </div>
     </div>
