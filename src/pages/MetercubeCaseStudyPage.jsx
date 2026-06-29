@@ -5,6 +5,20 @@ import caseImageC from "../Images/Case 2/Tradinglogo.png";
 import caseImageD from "../Images/Case 2/LogoUsage.png";
 import heroImage from "../Images/Case 2/Cover.png";
 import colorCodeUsage from "../Images/Case 2/ColorCodeUsage.png";
+import typoimageBanner from "../Images/Case 2/BannerTypo.png";
+import BrandManualCover from "../Images/Case 2/BrandGuid.png";
+import AssamblyManualCover from "../Images/Case 2/AssamblyManual.png";
+import ProdcutLabels from "../Images/Case 2/ProductLabel.png";
+import Stickers from "../Images/Case 2/Stickers.png";
+import ResearchPlanCard from "../Images/Case 2/ResearchPlanCards.png";
+import Interviewsynthesis from "../Images/Case 2/Interviewsynthesis.png";
+import SitemapImage from "../Images/Case 2/SiteMap.png";
+import Web1 from "../Images/Case 2/Web 1.png";
+import Web2 from "../Images/Case 2/Web 2.png";
+import Web3 from "../Images/Case 2/Web 3.png";
+import Web4 from "../Images/Case 2/Web 4.png";
+import Mobile1 from "../Images/Case 2/Mobile 1.png";
+import Mobile2 from "../Images/Case 2/Mobile 2.png";
 // ─────────────────────────────────────────────────────────────────────────────
 // SHARED PRIMITIVES
 // ─────────────────────────────────────────────────────────────────────────────
@@ -333,36 +347,50 @@ export default function MetercubeCaseStudyPage() {
           {/* Typography */}
           <h3 className="text-base font-semibold text-stone-800 mb-4 mt-8">Typography</h3>
           <BodyText>
-            Two typefaces working together: a <strong>humanist serif for display</strong> to bring warmth, and a <strong>geometric sans for UI</strong> to ensure digital legibility and precision.
-          </BodyText>
-          <div className="border border-stone-200 rounded-xl overflow-hidden my-6 bg-white">
-            <div className="px-6 py-2 bg-stone-50 border-b border-stone-100">
-              <p className="text-xs uppercase tracking-widest text-stone-400">Type Scale</p>
-            </div>
-            <div className="px-6">
-              <TypeSpecimen name="Display" sample="[ Serif Typeface Name ]" weight="300" size="2.5rem" usage="Hero headings, pull quotes, editorial moments" />
-              <TypeSpecimen name="Heading" sample="[ Serif Typeface Name ]" weight="600" size="1.5rem" usage="Section headings, product titles" />
-              <TypeSpecimen name="Body" sample="[ Sans Typeface Name ]" weight="400" size="1rem" usage="Body copy, descriptions, UI labels" />
-              <TypeSpecimen name="Caption / Label" sample="[ SANS TYPEFACE NAME ]" weight="500" size="0.75rem" usage="Image captions, tags, navigation" />
-            </div>
-          </div>
-          <Asset label="Typography specimen sheet — print + digital" caption="Type System" ratio="16/7" bg="#faf9f7" />
-
+  Two typefaces working together: a <strong>geometric sans for display</strong> to bring elegance, and a <strong>refined sans for UI</strong> to ensure digital legibility and precision.
+</BodyText>
+<div className="border border-stone-200 rounded-xl overflow-hidden my-6 bg-white">
+  <div className="px-6 py-2 bg-stone-50 border-b border-stone-100">
+    <p className="text-xs uppercase tracking-widest text-stone-400">Type Scale</p>
+  </div>
+  <div className="px-6">
+    <TypeSpecimen name="Display" sample="Avenir Next LT Pro" weight="200" size="2.5rem" usage="Hero headings, pull quotes, editorial moments" />
+    <TypeSpecimen name="Heading" sample="Avenir Next LT Pro" weight="300" size="1.5rem" usage="Section headings, product titles" />
+    <TypeSpecimen name="Body" sample="Avenir Next LT Pro" weight="400" size="1rem" usage="Body copy, descriptions, UI labels" />
+    <TypeSpecimen name="Caption / Label" sample="AVENIR NEXT LT PRO" weight="500" size="0.75rem" usage="Image captions, tags, navigation" />
+  </div>
+</div>
+          <figure className="my-8">
+          <img
+            src={typoimageBanner}
+            alt="Hero — Metercube storefront / lifestyle hero image"
+            className="w-full h-auto rounded-xl object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption className="mt-2 flex gap-3 text-xs text-stone-400 uppercase tracking-widest">
+            <span>Image</span>
+            <span>typoUsage Image</span>
+          </figcaption>
+        </figure>
           {/* Brand guidelines */}
           <h3 className="text-base font-semibold text-stone-800 mb-3 mt-8">Brand Guidelines</h3>
           <BodyText>
             A comprehensive brand book was delivered covering logo usage, colour application, photography direction, tone of voice, and print specifications.
           </BodyText>
-          <AssetGrid
-            caption="Brand Guidelines Spreads"
-            items={[
-              { label: "Brand book — cover", bg: "#1c1917", ratio: "3/4" },
-              { label: "Brand book — logo rules", bg: "#f0ede8", ratio: "3/4" },
-              { label: "Brand book — colour & type", bg: "#faf9f7", ratio: "3/4" },
-              { label: "Brand book — photography direction", bg: "#e8e0d4", ratio: "3/4" },
-            ]}
-            cols={4}
+           <figure className="my-8">
+          <img
+            src={BrandManualCover}
+            alt="Hero — Metercube storefront / lifestyle hero image"
+            className="w-full h-auto rounded-xl object-cover"
+            loading="lazy"
+            decoding="async"
           />
+          <figcaption className="mt-2 flex gap-3 text-xs text-stone-400 uppercase tracking-widest">
+            <span>Image</span>
+            <span>Brand Manual Cover Image</span>
+          </figcaption>
+        </figure>
         </section>
 
         {/* ── ASSEMBLY MANUAL, LABELS & STICKERS ─────────────────── */}
@@ -385,49 +413,57 @@ export default function MetercubeCaseStudyPage() {
             { label: "Colour:", desc: "1-colour + brand accent / full-colour cover" },
             { label: "Illustration style:", desc: "Line-art technical drawings with numbered callouts" },
           ]} />
-          <AssetGrid
-            caption="Assembly Manual"
-            items={[
-              { label: "Manual cover", bg: "#f0ede8", ratio: "3/4" },
-              { label: "Manual spread — step 1–4", bg: "#faf9f7", ratio: "3/4" },
-              { label: "Manual spread — step 5–8", bg: "#faf9f7", ratio: "3/4" },
-              { label: "Manual back / warranty card", bg: "#f0ede8", ratio: "3/4" },
-            ]}
-            cols={4}
+          <figure className="my-8">
+          <img
+            src={AssamblyManualCover}
+            alt="Hero — Metercube storefront / lifestyle hero image"
+            className="w-full h-auto rounded-xl object-cover"
+            loading="lazy"
+            decoding="async"
           />
+          <figcaption className="mt-2 flex gap-3 text-xs text-stone-400 uppercase tracking-widest">
+            <span>Image</span>
+            <span>Assembly Manual Example Image</span>
+          </figcaption>
+        </figure>
 
           {/* Labels */}
           <h3 className="text-base font-semibold text-stone-800 mb-3 mt-8">Product Labels</h3>
           <BodyText>
             Labels carry <strong>material information, care instructions, and QR codes</strong> linking to digital assembly guides and product pages. Typography and white space mirror the web experience for brand cohesion.
           </BodyText>
-          <AssetGrid
-            caption="Product Labels"
-            items={[
-              { label: "Hang tag — front", bg: "#e8e0d4", ratio: "2/3" },
-              { label: "Hang tag — back / QR", bg: "#f0ede8", ratio: "2/3" },
-              { label: "Box label — full spec", bg: "#faf9f7", ratio: "2/3" },
-              { label: "Care label — fabric", bg: "#e8e0d4", ratio: "2/3" },
-              { label: "Warranty card", bg: "#f5f0e8", ratio: "2/3" },
-              { label: "Label die-line / print-ready", bg: "#faf9f7", ratio: "2/3" },
-            ]}
-            cols={3}
+          <figure className="my-8">
+          <img
+            src={ProdcutLabels}
+            alt="Hero — Metercube storefront / lifestyle hero image"
+            className="w-full h-auto rounded-xl object-cover"
+            loading="lazy"
+            decoding="async"
           />
+          <figcaption className="mt-2 flex gap-3 text-xs text-stone-400 uppercase tracking-widest">
+            <span>Image</span>
+            <span>ProdcutLabels Image</span>
+          </figcaption>
+        </figure>
 
           {/* Stickers */}
           <h3 className="text-base font-semibold text-stone-800 mb-3 mt-8">Stickers &amp; Packaging Inserts</h3>
           <BodyText>
             A suite of branded stickers and box-seal labels that delight customers at unboxing, turning the delivery moment into a <strong>brand touchpoint worth sharing</strong>.
           </BodyText>
-          <AssetGrid
-            caption="Stickers & Inserts"
-            items={[
-              { label: "Sticker sheet", bg: "#faf9f7", ratio: "4/3" },
-              { label: "Box seal / thank-you card", bg: "#e8e0d4", ratio: "4/3" },
-              { label: "Tissue wrap pattern", bg: "#f0ede8", ratio: "4/3" },
-            ]}
-            cols={3}
+         <figure className="my-8">
+          <img
+            src={Stickers}
+            alt="Hero — Metercube storefront / lifestyle hero image"
+            className="w-full h-auto rounded-xl object-cover"
+            loading="lazy"
+            decoding="async"
           />
+          <figcaption className="mt-2 flex gap-3 text-xs text-stone-400 uppercase tracking-widest">
+            <span>Image</span>
+            <span>Product Stickers and Package labels Image</span>
+          </figcaption>
+        </figure>
         </section>
 
         {/* ── UX RESEARCH & DISCOVERY ─────────────────────────────── */}
@@ -443,12 +479,23 @@ export default function MetercubeCaseStudyPage() {
           <h3 className="text-base font-semibold text-stone-800 mb-3 mt-6">Research Methods</h3>
           <BulletList items={[
             { label: "In-depth user interviews:", desc: "[ n = X ] homeowners in Bengaluru, 45-minute sessions covering purchase journeys, trust signals, and pain points with existing platforms." },
-            { label: "Competitor audit:", desc: "Benchmarked against [ Platform A ], [ Platform B ], and [ Platform C ] across UX, brand positioning, and checkout flow." },
+            { label: "Competitor audit:", desc: "Benchmarked against HOMECENTER,IKEA and WakeFit across UX, brand positioning, and checkout flow." },
             { label: "Heuristic evaluation:", desc: "Applied Nielsen's 10 heuristics to competitors to identify common failure patterns in premium furniture eCommerce." },
             { label: "Analytics review:", desc: "Analysed existing [ traffic / social data ] to understand which products and categories drove organic interest." },
           ]} />
 
-          <Asset label="Research plan — methods overview / affinity map" caption="Research Overview" ratio="16/8" bg="#f0ede8" />
+          <figure className="my-8">
+          <img
+            src={ResearchPlanCard}
+            className="w-full h-auto rounded-xl object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption className="mt-2 flex gap-3 text-xs text-stone-400 uppercase tracking-widest">
+            <span>Image</span>
+            <span>Research Overview</span>
+          </figcaption>
+        </figure>
 
           {/* Key insights */}
           <h3 className="text-base font-semibold text-stone-800 mb-4 mt-8">Key Insights</h3>
@@ -467,8 +514,19 @@ export default function MetercubeCaseStudyPage() {
             </InsightCard>
           </div>
 
-          <Asset label="Interview synthesis — affinity diagram / insight clusters" caption="2.1 Research Synthesis" ratio="4/3" bg="#f5f0e8" />
-
+          <figure className="my-8">
+          <img
+            src={Interviewsynthesis}
+            className="w-full h-auto rounded-xl object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption className="mt-2 flex gap-3 text-xs text-stone-400 uppercase tracking-widest">
+            <span>Image</span>
+            <span>Research Overview</span>
+          </figcaption>
+        </figure>
+          
           <PullQuote>
             "I want to feel confident it'll look right in my flat — I need to see it in a real room, not on a white background."
             <br />
@@ -496,7 +554,19 @@ export default function MetercubeCaseStudyPage() {
           <BodyText>
             We restructured the product catalogue around how users <strong>think about rooms and materials</strong> rather than flat product categories—making discovery more intuitive for homeowners starting from inspiration rather than a specific product search.
           </BodyText>
-          <Asset label="Site map / IA diagram" caption="Information Architecture" ratio="16/8" bg="#f0ede8" />
+          
+           <figure className="my-8">
+          <img
+            src={SitemapImage}
+            className="w-full h-auto rounded-xl object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption className="mt-2 flex gap-3 text-xs text-stone-400 uppercase tracking-widest">
+            <span>Image</span>
+            <span>Information Architecture</span>
+          </figcaption>
+        </figure>
 
           {/* Design exploration */}
           <h3 className="text-base font-semibold text-stone-800 mb-3 mt-8">Design Exploration</h3>
@@ -508,51 +578,87 @@ export default function MetercubeCaseStudyPage() {
             { label: "Direction B — Catalogue:", desc: "Dense product grid, filter-heavy. Efficient but lost the lifestyle feel." },
             { label: "Direction C — Hybrid (selected):", desc: "Editorial hero + structured catalogue below. Balanced aspiration with usability." },
           ]} />
-          <AssetGrid
-            caption="Design Exploration"
-            items={[
-              { label: "Direction A — Editorial", bg: "#e8e0d4", ratio: "3/4" },
-              { label: "Direction B — Catalogue", bg: "#f0ede8", ratio: "3/4" },
-              { label: "Direction C — Hybrid (selected)", bg: "#faf9f7", ratio: "3/4" },
-            ]}
-            cols={3}
-          />
+        
 
           {/* Key screens */}
           <h3 className="text-base font-semibold text-stone-800 mb-3 mt-8">Key Screens</h3>
-          <Asset label="Homepage — Hero + Featured Collections" caption="Homepage" ratio="16/9" bg="linear-gradient(135deg,#e8e0d4,#f5f0e8)" />
-          <Asset label="PLP — Product Listing Page with filters" caption="Product Listing" ratio="16/9" bg="#f5f0e8" />
+          <figure className="my-8">
+          <img
+            src={Web1}
+            className="w-full h-auto rounded-xl object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption className="mt-2 flex gap-3 text-xs text-stone-400 uppercase tracking-widest">
+            <span>Image</span>
+            <span>Home Page</span>
+          </figcaption>
+        </figure>
 
-          {/* PDP toggle */}
-          <div className="my-8">
-            <div className="flex gap-2 mb-4">
-              {["mobile", "desktop"].map(t => (
-                <button
-                  key={t}
-                  onClick={() => setActiveTab(t)}
-                  className={`text-xs px-3 py-1.5 rounded-full font-medium transition-colors ${
-                    activeTab === t
-                      ? "bg-stone-900 text-white"
-                      : "bg-stone-100 text-stone-500 hover:bg-stone-200"
-                  }`}
-                >
-                  {t.charAt(0).toUpperCase() + t.slice(1)}
-                </button>
-              ))}
-            </div>
-            <Asset
-              label={`PDP — Product Detail Page (${activeTab})`}
-              caption="Product Detail Page"
-              ratio={activeTab === "mobile" ? "9/16" : "16/9"}
-              bg="#f0ede8"
-            />
-          </div>
+        <figure className="my-8">
+          <img
+            src={Web2}
+            className="w-full h-auto rounded-xl object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption className="mt-2 flex gap-3 text-xs text-stone-400 uppercase tracking-widest">
+            <span>Image</span>
+            <span>Product Listing Page</span>
+          </figcaption>
+        </figure>
+          <figure className="my-8">
+          <img
+            src={Web3}
+            className="w-full h-auto rounded-xl object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption className="mt-2 flex gap-3 text-xs text-stone-400 uppercase tracking-widest">
+            <span>Image</span>
+            <span>Product Listing Page</span>
+          </figcaption>
+        </figure>
+        <figure className="my-8">
+          <img
+            src={Web4}
+            className="w-full h-auto rounded-xl object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption className="mt-2 flex gap-3 text-xs text-stone-400 uppercase tracking-widest">
+            <span>Image</span>
+            <span>Product Listing Page</span>
+          </figcaption>
+        </figure>
+          <figure className="my-8">
+          <img
+            src={Mobile1}
+            className="w-full h-auto rounded-xl object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption className="mt-2 flex gap-3 text-xs text-stone-400 uppercase tracking-widest">
+            <span>Image</span>
+            <span>Product Listing Page</span>
+          </figcaption>
+        </figure> <figure className="my-8">
+          <img
+            src={Mobile2}
+            className="w-full h-auto rounded-xl object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption className="mt-2 flex gap-3 text-xs text-stone-400 uppercase tracking-widest">
+            <span>Image</span>
+            <span>Product Listing Page</span>
+          </figcaption>
+        </figure>
 
-          <Asset label="Cart + Checkout flow" caption="Cart & Checkout" ratio="16/9" bg="#f5f0e8" />
-          <Asset label="Order confirmation + delivery tracker" caption="Post-Purchase" ratio="16/8" bg="#f0ede8" />
+         
         </section>
-
-        {/* ── USER TESTING ────────────────────────────────────────── */}
+{/* 
+        ── USER TESTING ──────────────────────────────────────────
         <section className="mb-16">
           <SectionLabel>User Testing</SectionLabel>
           <SectionHeading>Usability Testing</SectionHeading>
@@ -561,14 +667,12 @@ export default function MetercubeCaseStudyPage() {
             We ran <strong>[ n = X ] moderated usability sessions</strong> with Bengaluru homeowners across two rounds—once on lo-fi prototypes and once on the hi-fi Figma prototype before development handoff.
           </BodyText>
 
-          {/* Stats */}
           <div className="grid grid-cols-3 gap-4 my-8">
             <StatCard value="[ X ]" label="Participants across 2 rounds" />
             <StatCard value="[ X ]%" label="Task completion rate (Round 2)" />
             <StatCard value="[ X ]" label="Critical issues resolved pre-build" />
           </div>
 
-          {/* Test tasks */}
           <h3 className="text-base font-semibold text-stone-800 mb-4 mt-6">Task Completion Results</h3>
           <div className="border border-stone-200 rounded-xl overflow-hidden bg-white my-6">
             <div className="px-5 py-3 bg-stone-50 border-b border-stone-100">
@@ -604,7 +708,6 @@ export default function MetercubeCaseStudyPage() {
 
           <Asset label="User testing session — screen recording stills" caption="User Testing" ratio="16/8" bg="#f0ede8" />
 
-          {/* Findings & iterations */}
           <h3 className="text-base font-semibold text-stone-800 mb-3 mt-8">Key Findings &amp; Iterations</h3>
           <BulletList items={[
             { label: "Finding 1:", desc: "[ Placeholder — e.g. Room-context filter reduced time-to-product by X% ]" },
@@ -616,7 +719,6 @@ export default function MetercubeCaseStudyPage() {
           <Asset label="Before/after — PDP iterations from testing" caption="Iterations" ratio="16/7" bg="#f5f0e8" />
         </section>
 
-        {/* ── RESULT ──────────────────────────────────────────────── */}
         <section className="mb-16">
           <SectionLabel>Result</SectionLabel>
           <p className="text-xl leading-relaxed text-stone-500">
@@ -626,19 +728,16 @@ export default function MetercubeCaseStudyPage() {
           </p>
         </section>
 
-        {/* ── HAND-OFF & FINAL DESIGN ─────────────────────────────── */}
         <section className="mb-20">
           <SectionLabel>Present</SectionLabel>
           <SectionHeading>Hand-Off &amp; Final Design</SectionHeading>
 
-          {/* Design system */}
           <h3 className="text-base font-semibold text-stone-800 mb-3">Design System</h3>
           <BodyText>
             A Figma component library was handed off alongside Shopify Liquid templates, covering the full token set — colour, spacing, typography, shadows — with annotated component states.
           </BodyText>
           <Asset label="Design system — component library overview" caption="Design System" ratio="16/8" bg="#f0ede8" />
 
-          {/* Dev specs */}
           <h3 className="text-base font-semibold text-stone-800 mb-3 mt-8">Developer Specifications</h3>
           <AssetGrid
             caption="Hand Off"
@@ -649,7 +748,6 @@ export default function MetercubeCaseStudyPage() {
             cols={2}
           />
 
-          {/* Final screens */}
           <h3 className="text-base font-semibold text-stone-800 mb-3 mt-8">Final Screens</h3>
           <AssetGrid
             caption="Final Hi-Fi — Mobile"
@@ -663,7 +761,6 @@ export default function MetercubeCaseStudyPage() {
           />
           <Asset label="Final screens — Desktop full-page layouts" caption="Final Hi-Fi — Desktop" ratio="16/9" bg="linear-gradient(135deg,#e8e0d4,#f5f0e8)" />
 
-          {/* Print final */}
           <h3 className="text-base font-semibold text-stone-800 mb-3 mt-8">Print-Ready Files</h3>
           <AssetGrid
             caption="Print Hand-Off"
@@ -675,8 +772,9 @@ export default function MetercubeCaseStudyPage() {
             cols={3}
           />
         </section>
-
+ */}
       </div>
+     
     </div>
   );
 }
