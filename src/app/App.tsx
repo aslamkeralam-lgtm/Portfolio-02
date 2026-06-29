@@ -15,6 +15,7 @@ const getRoute = () => {
   if (pathname === "/photo") return "photo";
   if (pathname === "/resume") return "resume";
   if (pathname === "/archives") return "archives";
+  if (pathname === "/comingsoon") return "comingsoon";
   return "design";
 };
 
@@ -47,6 +48,8 @@ export default function App() {
           <MetercubeCaseStudyPage />
         ) : route === "igapp" ? (
           <IGappCaseStudyPage />
+        ) : route === "comingsoon" ? (
+          <ComingSoonPage title="Stay Tuned!" description="This page is coming soon. Check back for updates." />
         ) : route === "photo" ? (
           <PhotoPage />
         ) : route === "resume" ? (

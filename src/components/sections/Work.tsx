@@ -1,5 +1,9 @@
 import { motion } from "motion/react";
 import { ProjectCard } from "../common/ProjectCard";
+import Cover1 from "../../Images/Cover/Cover.png";
+import Cover2 from "../../Images/Cover/coverIG.png";
+import Cover3 from "../../Images/Cover/Cover3.png";
+import Cover4 from "../../Images/Cover/Cover4.png";
 
 interface CaseStudyProject {
   title: string;
@@ -7,28 +11,46 @@ interface CaseStudyProject {
   description: string;
   bgColor: string;
   year: string;
+  imageUrl?: string;
   route?: string;
 }
 
 const projects: CaseStudyProject[] = [
-  
   {
-    title: "Metercube redesign case study",
-    subtitle: "Premium furniture, home décor, and interiors for Bengaluru homeowners",
-    description:
-      "A full website redesign case study for Metercube, focusing on premium commerce, interior packages, and a refined shopping experience.",
-    bgColor: "bg-amber-300",
-    year: "2024",
-    route: "metercube",
+    title: "Navigating Volatility: A UX Redesign of IG's Mobile App with Crypto at the Core",
+    subtitle: "IG Group needed its mobile trading app to evolve — faster markets, new asset classes, and a growing base of crypto-curious traders demanded more than incremental",
+    description: "...",
+    bgColor: "",
+    year: "2026",
+    route: "comingsoon",
+    imageUrl: Cover4, // ← your screenshot here
   },
   {
-    title: "IGapp investment case study",
-    subtitle: "Mobile-first investment experience for creator growth",
-    description:
-      "A product-led redesign of IGapp to simplify portfolio clarity, tax-aware guidance, and growth actions.",
-    bgColor: "bg-sky-200",
+    title: "Raydius: A Trust-First Redesign for a Complex Financial Platform",
+    subtitle: "Raydius, a Frankfurt-based turbo warrant issuer under IG Group, needed a platform that matched the sophistication of its products with an equally credible and intuitive experience.",
+    description: "...",
+    bgColor: "",
     year: "2025",
+    route: "comingsoon",
+    imageUrl: Cover3, // ← your screenshot here
+  },
+  {
+    title: "Designing a Premium Lifestyle eCommerce Experience for Bengaluru Homeowners",
+    subtitle: "Metercube is a Bengaluru-based premium furniture and home décor brand curating quality lifestyle products for discerning urban homeowners. ",
+    description: "...",
+    bgColor: "",
+    year: "2021",
+    route: "metercube",
+    imageUrl: Cover1, // ← your screenshot here
+  },
+  {
+    title: "Introducing a Volume-Based Rebate Program at IG to Boost Adoption of Underused Instruments Across UK, APAC & EM (Europe)",
+    subtitle: "IG Group is the No. 1 CFD provider, offering instruments like indices, FX, gold, and commodities. While indices and FX dominated trading activity",
+    description: "...",
+    bgColor: "",
+    year: "2024",
     route: "igapp",
+    imageUrl: Cover2, // ← your screenshot here
   },
 ];
 

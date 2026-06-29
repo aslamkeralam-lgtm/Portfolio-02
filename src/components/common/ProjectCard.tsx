@@ -6,6 +6,7 @@ interface Project {
   description: string;
   bgColor: string;
   year: string;
+  imageUrl?: string;
 }
 
 interface ProjectCardProps {
@@ -15,8 +16,6 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, index, onClick }: ProjectCardProps) {
-  const isDark = project.bgColor.includes("slate");
-
   return (
     <motion.article
       initial={{ opacity: 0, y: 40 }}
@@ -24,34 +23,45 @@ export function ProjectCard({ project, index, onClick }: ProjectCardProps) {
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       onClick={onClick}
-      className={`group ${project.bgColor} rounded-2xl p-6 flex flex-col justify-between min-h-[340px] hover:scale-[1.02] transition-transform duration-300 ${onClick ? "cursor-pointer" : ""}`}
+      className={`group flex flex-col bg-white border border-gray-100 rounded-2xl overflow-hidden hover:border-gray-300 transition-all duration-300 ${
+        onClick ? "cursor-pointer" : ""
+      }`}
       role={onClick ? "button" : undefined}
       tabIndex={onClick ? 0 : undefined}
     >
-      <div className="space-y-3">
-        <div className="flex items-start justify-between">
-          <span className={`text-xs uppercase tracking-wider ${isDark ? 'text-white/60' : 'text-black/60'}`}>
-            {project.year}
-          </span>
-          <div className={`w-7 h-7 rounded-full ${isDark ? 'bg-white/10' : 'bg-black/5'} flex items-center justify-center flex-shrink-0`}>
-            <span className={`text-sm ${isDark ? 'text-white' : 'text-black'}`}>→</span>
+      {/* Image area */}
+      <div className="w-full aspect-[16/9] bg-gray-50 overflow-hidden">
+        {project.imageUrl ? (
+          <img
+            src={project.imageUrl}
+            alt={project.title}
+            className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-gray-100">
+            <div className="w-16 h-16 rounded-xl bg-gray-200" />
           </div>
-        </div>
-
-        <div className="space-y-2">
-          <h3 className={`text-xl font-semibold leading-snug ${isDark ? 'text-white' : 'text-black'}`}>
-            {project.title}
-          </h3>
-          <p className={`text-sm leading-relaxed ${isDark ? 'text-white/70' : 'text-black/70'}`}>
-            {project.subtitle}
-          </p>
-        </div>
+        )}
       </div>
 
-      <div className="mt-5">
-        <div className={`aspect-video rounded-lg ${isDark ? 'bg-white/5' : 'bg-black/5'} flex items-center justify-center overflow-hidden`}>
-          <div className={`w-20 h-20 rounded-xl ${isDark ? 'bg-white/10' : 'bg-black/10'}`} />
+      {/* Content */}
+      <div className="flex flex-col gap-2 p-5">
+        <div className="flex items-center justify-between">
+          <span className="text-xs uppercase tracking-widest text-gray-400">
+            {project.year}
+          </span>
+          <span className="text-sm text-gray-400 group-hover:translate-x-1 transition-transform duration-200">
+            →
+          </span>
         </div>
+
+        <h3 className="text-base font-semibold text-gray-900 leading-snug">
+          {project.title}
+        </h3>
+
+        <p className="text-sm text-gray-500 leading-relaxed">
+          {project.subtitle}
+        </p>
       </div>
     </motion.article>
   );
