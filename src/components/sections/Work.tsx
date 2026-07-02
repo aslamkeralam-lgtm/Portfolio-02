@@ -26,12 +26,12 @@ const projects: CaseStudyProject[] = [
     imageUrl: Cover4, // ← your screenshot here
   },
   {
-    title: "Raydius: A Trust-First Redesign for a Complex Financial Platform",
+    title: "Designing the Trading Experience for Raydius — Europe's First On-Venue 24-Hour Turbo Warrant Issuer",
     subtitle: "Raydius, a Frankfurt-based turbo warrant issuer under IG Group, needed a platform that matched the sophistication of its products with an equally credible and intuitive experience.",
     description: "...",
     bgColor: "",
     year: "2025",
-    route: "comingsoon",
+    route: "raydius",
     imageUrl: Cover3, // ← your screenshot here
   },
   {
