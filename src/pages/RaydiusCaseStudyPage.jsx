@@ -9,6 +9,12 @@ import Sitemap from "../Images/Case 3/RSitemap.png";
 import Ray01 from "../Images/Case 3/Ray01.png";
 import Ray02 from "../Images/Case 3/Ray02.png";
 import Ray03 from "../Images/Case 3/Ray03.png";
+import DesignSystem from "../Images/Case 3/DesignSystem.png";
+import Ray04 from "../Images/Case 3/Ray04.png";
+import Ray05 from "../Images/Case 3/Ray05.png";
+import Ray06 from "../Images/Case 3/Ray06.png";
+import Ray07 from "../Images/Case 3/Ray07.png";
+import Ray08 from "../Images/Case 3/Ray08.png";
 // ─────────────────────────────────────────────────────────────────────────────
 // SHARED PRIMITIVES
 // ─────────────────────────────────────────────────────────────────────────────
@@ -520,7 +526,7 @@ export default function RaydiusCaseStudyPage() {
             </div>
           </div>
 
-          <Asset label="User testing session — screen recording stills" caption="User Testing" ratio="16/8" bg="#eef2f6" />
+          {/* <Asset label="User testing session — screen recording stills" caption="User Testing" ratio="16/8" bg="#eef2f6" /> */}
 
           <h3 className="text-base font-semibold text-slate-800 mb-3 mt-8">Key Findings &amp; Iterations</h3>
           <BulletList items={[
@@ -529,7 +535,7 @@ export default function RaydiusCaseStudyPage() {
             { label: "Finding 3:", desc: "Leverage risk tiers (Low/Medium/High) tested significantly better for comprehension than raw multiplier values alone, especially for less experienced traders." },
           ]} />
 
-          <Asset label="Before/after — order ticket iterations from testing" caption="Iterations" ratio="16/7" bg="#eef2f6" />
+          {/* <Asset label="Before/after — order ticket iterations from testing" caption="Iterations" ratio="16/7" bg="#eef2f6" /> */}
         </section>
 
         {/* ── RESULT ──────────────────────────────────────────────── */}
@@ -551,30 +557,90 @@ export default function RaydiusCaseStudyPage() {
           <BodyText>
             A component library covering data-dense states — live price tickers, knock-out gauges, leverage tags, and long/short indicators — handed off with full token documentation.
           </BodyText>
-          <Asset label="Design system — component library overview" caption="Design System" ratio="16/8" bg="#eef2f6" />
+         
+          <figure className="my-8">
+                 <img
+                   src={DesignSystem}
+                   alt="Hero — Metercube storefront / lifestyle hero image"
+                   className="w-full h-auto rounded-xl object-cover"
+                   loading="lazy"
+                   decoding="async"
+                 />
+                 <figcaption className="mt-2 flex gap-3 text-xs text-stone-400 uppercase tracking-widest">
+                   <span>Image</span>
+                   <span>Design System</span>
+                 </figcaption>
+          </figure>
 
-          <h3 className="text-base font-semibold text-slate-800 mb-3 mt-8">Developer Specifications</h3>
-          <AssetGrid
-            caption="Hand Off"
-            items={[
-              { label: "Mobile order ticket — measurements", bg: "#f7f9fb", ratio: "3/4" },
-              { label: "Desktop layout grid + spacing", bg: "#eef2f6", ratio: "3/4" },
-            ]}
-            cols={2}
-          />
+
+          
 
           <h3 className="text-base font-semibold text-slate-800 mb-3 mt-8">Final Screens</h3>
-          <AssetGrid
-            caption="Final Hi-Fi — Mobile"
-            items={[
-              { label: "Product selector", bg: "#eef2f6", ratio: "9/16" },
-              { label: "Trade chart", bg: "#f7f9fb", ratio: "9/16" },
-              { label: "Order ticket", bg: "#e0f2fe", ratio: "9/16" },
-              { label: "Position management", bg: "#eef2f6", ratio: "9/16" },
-            ]}
-            cols={4}
-          />
-          <Asset label="Final screens — Desktop full-page layouts" caption="Final Hi-Fi — Desktop" ratio="16/9" bg="linear-gradient(135deg,#dbeafe,#e0f2fe)" />
+          <figure className="my-8">
+                 <img
+                   src={Ray04}
+                   alt="Hero — Metercube storefront / lifestyle hero image"
+                   className="w-full h-auto rounded-xl object-cover"
+                   loading="lazy"
+                   decoding="async"
+                 />
+                 <figcaption className="mt-2 flex gap-3 text-xs text-stone-400 uppercase tracking-widest">
+                   <span>Image</span>
+                   <span>home page</span>
+                 </figcaption>
+          </figure>
+          <figure className="my-8">
+                 <img
+                   src={Ray05}
+                   alt="Hero — Metercube storefront / lifestyle hero image"
+                   className="w-full h-auto rounded-xl object-cover"
+                   loading="lazy"
+                   decoding="async"
+                 />
+                 <figcaption className="mt-2 flex gap-3 text-xs text-stone-400 uppercase tracking-widest">
+                   <span>Image</span>
+                   <span>Product Page</span>
+                 </figcaption>
+          </figure>
+          <figure className="my-8">
+                 <img
+                   src={Ray06}
+                   alt="Hero — Metercube storefront / lifestyle hero image"
+                   className="w-full h-auto rounded-xl object-cover"
+                   loading="lazy"
+                   decoding="async"
+                 />
+                 <figcaption className="mt-2 flex gap-3 text-xs text-stone-400 uppercase tracking-widest">
+                   <span>Image</span>
+                   <span>Global Search </span>
+                 </figcaption>
+          </figure>
+          <figure className="my-8">
+                 <img
+                   src={Ray07}
+                   alt="Hero — Metercube storefront / lifestyle hero image"
+                   className="w-full h-auto rounded-xl object-cover"
+                   loading="lazy"
+                   decoding="async"
+                 />
+                 <figcaption className="mt-2 flex gap-3 text-xs text-stone-400 uppercase tracking-widest">
+                   <span>Image</span>
+                   <span>Product page dark mode</span>
+                 </figcaption>
+          </figure>
+          <figure className="my-8">
+                 <img
+                   src={Ray08}
+                   alt="Hero — Metercube storefront / lifestyle hero image"
+                   className="w-full h-auto rounded-xl object-cover"
+                   loading="lazy"
+                   decoding="async"
+                 />
+                 <figcaption className="mt-2 flex gap-3 text-xs text-stone-400 uppercase tracking-widest">
+                   <span>Image</span>
+                   <span>Mobile View footer</span>
+                 </figcaption>
+          </figure>
         </section>
 
       </div>
