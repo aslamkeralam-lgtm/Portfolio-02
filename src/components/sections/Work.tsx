@@ -22,7 +22,7 @@ const projects: CaseStudyProject[] = [
     description: "...",
     bgColor: "",
     year: "2026",
-    route: "comingsoon",
+    route: "tradingapp",
     imageUrl: Cover4, // ← your screenshot here
   },
   {

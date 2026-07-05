@@ -8,12 +8,14 @@ import { PhotoPage } from "../pages/PhotoPage";
 import { ResumePage } from "../pages/ResumePage";
 import { ComingSoonPage } from "../pages/ComingSoonPage";
 import RaydiusCaseStudyPage from "../pages/RaydiusCaseStudyPage.jsx";
+import TradingAppCaseStudy from "../pages/TradingAppCaseStudyPage.jsx";
 
 const getRoute = () => {
   const pathname = window.location.pathname;
   if (pathname === "/metercube") return "metercube";
   if (pathname === "/igapp") return "igapp";
   if (pathname === "/raydius") return "raydius";
+  if (pathname === "/tradingapp") return "tradingapp";
   if (pathname === "/photo") return "photo";
   if (pathname === "/resume") return "resume";
   if (pathname === "/archives") return "archives";
@@ -52,6 +54,8 @@ export default function App() {
           <IGappCaseStudyPage />
         ) : route === "raydius" ? (
           <RaydiusCaseStudyPage />
+        ) : route === "tradingapp" ? (
+          <TradingAppCaseStudy />
         ) : route === "comingsoon" ? (
           <ComingSoonPage title="Stay Tuned!" description="This page is coming soon. Check back for updates." />
         ) : route === "photo" ? (
