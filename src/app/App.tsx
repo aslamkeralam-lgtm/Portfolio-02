@@ -9,6 +9,7 @@ import { ResumePage } from "../pages/ResumePage";
 import { ComingSoonPage } from "../pages/ComingSoonPage";
 import RaydiusCaseStudyPage from "../pages/RaydiusCaseStudyPage.jsx";
 import TradingAppCaseStudy from "../pages/TradingAppCaseStudyPage.jsx";
+import  Archives  from "../pages/Archives.jsx";
 
 const getRoute = () => {
   const pathname = window.location.pathname;
@@ -63,7 +64,7 @@ export default function App() {
         ) : route === "resume" ? (
           <ResumePage />
         ) : route === "archives" ? (
-          <ComingSoonPage title="Archives" description="This Archives page is coming soon. Check back for updates." />
+          <Archives />
         ) : (
           <DesignPage onNavigate={navigate} />
         )}

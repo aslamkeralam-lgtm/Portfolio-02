@@ -1,0 +1,135 @@
+/* Color variables — adjust to match your design system */
+.grid-flip-wrapper {
+  --color-just-black: #111111;
+  --color-surface50: #cfcfcf;
+  --color-blue: #1e3a8a;
+}
+
+.grid-flip-wrapper * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--color-just-black);
+}
+
+.grid-flip-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxes-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.4rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  padding: 10px;
+  border: 2px dashed var(--color-surface50);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .boxes-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .boxes-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.box-content {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  position: relative;
+}
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-close {
+  position: absolute;
+  top: calc(50% - 45vh - 1.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1003;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  background: rgba(17, 17, 17, 0.8);
+  color: #ffffff;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+.modal .content {
+  width: min(90vw, 90vh * 1.2);
+  height: min(90vh, 90vw / 1.2);
+  max-width: 90vw;
+  max-height: 90vh;
+  position: relative;
+  z-index: 1002;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal .content .box-content {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+}
