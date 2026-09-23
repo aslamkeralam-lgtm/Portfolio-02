@@ -13,6 +13,12 @@ import Eight from "../../Images/Archives/Two/Logo3.png";
 import Nine from "../../Images/Archives/Two/Logo4.png";
 import Ten from "../../Images/Archives/One/BrandGuid.png";
 import Eleven from "../../Images/Archives/One/MTwo.png";
+import Twelve from "../../Images/Archives/1.png";
+import Thirteen from "../../Images/Archives/2.png";
+import Fourteen from "../../Images/Archives/3.png";
+import Fifteen from "../../Images/Archives/4.png";
+import Sixteen from "../../Images/Archives/5.png";
+import Seventeen from "../../Images/Archives/6.png";
 
 
 gsap.registerPlugin(Flip);
@@ -28,7 +34,13 @@ const images = [
     { id: "eight", src: Eight },
     { id: "nine", src: Nine },
     { id: "ten", src: Ten },
-    { id: "eleven", src: Eleven }
+    { id: "eleven", src: Eleven },
+    { id: "twelve", src: Twelve },
+    { id: "thirteen", src: Thirteen },
+    { id: "fourteen", src: Fourteen },
+    { id: "fifteen", src: Fifteen },
+    { id: "sixteen", src: Sixteen },
+    { id: "seventeen", src: Seventeen }
 ];
 
 export default function GridFlipModal() {
