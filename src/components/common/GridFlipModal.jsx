@@ -1,6 +1,4 @@
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { Flip } from "gsap/Flip";
+import { useState } from "react";
 import "../../pages/GridFlipModal.css";
 import One from "../../Images/Archives/One/Tradinglogo.png";
 import Two from "../../Images/Archives/One/LogoDark.png";
@@ -19,9 +17,12 @@ import Fourteen from "../../Images/Archives/3.png";
 import Fifteen from "../../Images/Archives/4.png";
 import Sixteen from "../../Images/Archives/5.png";
 import Seventeen from "../../Images/Archives/6.png";
-
-
-gsap.registerPlugin(Flip);
+import Eighteen from "../../Images/Archives/7.png";
+import Nineteen from "../../Images/Archives/8.png";
+import Twenty from "../../Images/Archives/9.png";
+import TwentyOne from "../../Images/Archives/10.png";
+import TwentyTwo from "../../Images/Archives/11.png";
+import TwentyThree from "../../Images/Archives/12.png";
 
 const images = [
   { id: "one", src: One },
@@ -29,118 +30,124 @@ const images = [
   { id: "three", src: Three },
   { id: "four", src: Four },
   { id: "five", src: Five },
-    { id: "six", src: Six },    
-    { id: "seven", src: Seven },
-    { id: "eight", src: Eight },
-    { id: "nine", src: Nine },
-    { id: "ten", src: Ten },
-    { id: "eleven", src: Eleven },
-    { id: "twelve", src: Twelve },
-    { id: "thirteen", src: Thirteen },
-    { id: "fourteen", src: Fourteen },
-    { id: "fifteen", src: Fifteen },
-    { id: "sixteen", src: Sixteen },
-    { id: "seventeen", src: Seventeen }
+  { id: "six", src: Six },
+  { id: "seven", src: Seven },
+  { id: "eight", src: Eight },
+  { id: "nine", src: Nine },
+  { id: "ten", src: Ten },
+  { id: "eleven", src: Eleven },
+  { id: "twelve", src: Twelve },
+  { id: "thirteen", src: Thirteen },
+  { id: "fourteen", src: Fourteen },
+  { id: "fifteen", src: Fifteen },
+  { id: "sixteen", src: Sixteen },
+  { id: "seventeen", src: Seventeen },
+  { id: "eighteen", src: Eighteen },
+  { id: "nineteen", src: Nineteen },
+  { id: "twenty", src: Twenty },
+  { id: "twenty-one", src: TwentyOne },
+  { id: "twenty-two", src: TwentyTwo },
+  { id: "twenty-three", src: TwentyThree },
 ];
 
+const shuffleImages = (items) => {
+  const shuffled = [...items];
+
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+  }
+
+  return shuffled;
+};
+
+const shuffledImages = shuffleImages(images);
+
 export default function GridFlipModal() {
-  const containerRef = useRef(null);
-  const modalRef = useRef(null);
-  const modalContentRef = useRef(null);
-  const modalOverlayRef = useRef(null);
-  const boxIndexRef = useRef(undefined);
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  const closeModal = () => {
-    const modal = modalRef.current;
-    const modalOverlay = modalOverlayRef.current;
-    const boxes = gsap.utils.toArray(".box", containerRef.current);
-    const activeBox = modalContentRef.current?.firstElementChild;
-
-    if (!activeBox || boxIndexRef.current === undefined) {
-      return;
-    }
-
-    const state = Flip.getState(activeBox);
-    boxes[boxIndexRef.current].appendChild(activeBox);
-    boxIndexRef.current = undefined;
-
-    gsap.to([modal, modalOverlay], {
-      autoAlpha: 0,
-      ease: "power1.inOut",
-      duration: 0.35,
-    });
-
-    Flip.from(state, {
-      duration: 0.7,
-      ease: "power1.inOut",
-      absolute: true,
-      onComplete: () => gsap.set(activeBox, { zIndex: "auto" }),
-    });
-
-    gsap.set(activeBox, { zIndex: 1002 });
+  const openModal = (index) => {
+    setActiveIndex(index);
+    setIsOpen(true);
   };
 
-  useEffect(() => {
-    const modal = modalRef.current;
-    const modalContent = modalContentRef.current;
-    const modalOverlay = modalOverlayRef.current;
-    const boxes = gsap.utils.toArray(".box", containerRef.current);
-    const boxesContent = gsap.utils.toArray(".box-content", containerRef.current);
+  const closeModal = () => {
+    setIsOpen(false);
+  };
 
-    const cleanupFns = [];
+  const goToPrevious = () => {
+    setActiveIndex((current) => (current === 0 ? shuffledImages.length - 1 : current - 1));
+  };
 
-    boxesContent.forEach((box, i) => {
-      const handleClick = () => {
-        if (boxIndexRef.current !== undefined) {
-          closeModal();
-          return;
-        }
+  const goToNext = () => {
+    setActiveIndex((current) => (current === shuffledImages.length - 1 ? 0 : current + 1));
+  };
 
-        const state = Flip.getState(box);
-        modalContent.appendChild(box);
-        boxIndexRef.current = i;
-
-        gsap.set(modal, { autoAlpha: 1 });
-
-        Flip.from(state, {
-          duration: 0.7,
-          ease: "power1.inOut",
-        });
-
-        gsap.to(modalOverlay, { autoAlpha: 0.65, duration: 0.35 });
-      };
-
-      box.addEventListener("click", handleClick);
-      cleanupFns.push(() => box.removeEventListener("click", handleClick));
-    });
-
-    return () => cleanupFns.forEach((fn) => fn());
-  }, []);
+  const currentImage = shuffledImages[activeIndex];
 
   return (
-    <div className="grid-flip-wrapper" ref={containerRef}>
+    <div className="grid-flip-wrapper">
       <div className="boxes-container">
-        {images.map((img) => (
-          <div className="box" key={img.id}>
+        {shuffledImages.map((img, index) => (
+          <button
+            type="button"
+            className="box"
+            key={img.id}
+            onClick={() => openModal(index)}
+            aria-label={`Open image ${index + 1}`}
+          >
             <div
               className={`box-content ${img.id}`}
               style={{ backgroundImage: `url(${img.src})` }}
             />
-          </div>
+          </button>
         ))}
       </div>
 
-      <div className="modal" ref={modalRef}>
-        <div className="overlay" ref={modalOverlayRef}></div>
+      <div className={`modal ${isOpen ? "is-open" : ""}`} aria-hidden={!isOpen}>
+        <div className="overlay" onClick={closeModal} role="button" tabIndex={0} onKeyDown={(event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            closeModal();
+          }
+        }} />
+
         <button
           type="button"
           className="modal-close"
           onClick={closeModal}
-          aria-label="Close image"
+          aria-label="Close gallery"
         >
           ×
         </button>
-        <div className="content" ref={modalContentRef}></div>
+
+        <div className="modal-carousel" aria-live="polite">
+          <button
+            type="button"
+            className="modal-nav left"
+            onClick={goToPrevious}
+            aria-label="Previous image"
+          >
+            ←
+          </button>
+
+          <div className="content">
+            <div
+              className="box-content active"
+              style={{ backgroundImage: `url(${currentImage.src})` }}
+            />
+          </div>
+
+          <button
+            type="button"
+            className="modal-nav right"
+            onClick={goToNext}
+            aria-label="Next image"
+          >
+            →
+          </button>
+        </div>
       </div>
     </div>
   );
